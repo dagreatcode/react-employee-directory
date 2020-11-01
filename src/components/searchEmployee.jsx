@@ -27,7 +27,7 @@ class SearchEmployee extends Component {
                 <div>
                     {this.state.results.map((employee) => (
                         <Employees
-                        image={employee.picture.thumbnail}
+                        // image={employee.picture.thumbnail}
                         name={employee.name.first + employee.name.last}
                         phone={employee.phone}
                         email={employee.email}
