@@ -23,7 +23,20 @@ class SearchEmployee extends Component {
 
     render() {
         return (
-
+            <> 
+                <div style={{ margin: 20, display: "flex", justifyContent: "center" }}>
+                <input
+                    style={{
+                    height: 45,
+                    width: 200,
+                    borderRadius: 5,
+                    borderColor: "#E8E7EB",
+                    }}
+                    type="search"
+                    id="search"
+                    placeholder="Search"
+                ></input>
+                </div>
                 <div>
                     {this.state.results.map((employee) => (
                         <Employees
@@ -35,7 +48,7 @@ class SearchEmployee extends Component {
                         />
                     ))}
                 </div>
-
+            </>
         );
     }
 }
