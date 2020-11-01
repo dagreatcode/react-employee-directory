@@ -1,28 +1,32 @@
-const Employees = (props) => {
-    return (
-        <div>
-            <table class="table">
-                <thead>
-                    <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">DOB</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <th scope="row">#</th>
-                    <td>{props.firstname}</td>
-                    <td>{props.lastname}</td>
-                    <td>{props.email}</td>
-                    <td>{props.dob}</td>
-                    </tr>
-                </tbody>
-                </table>
-        </div>
-    );
-};
+import React, { Component } from 'react';
+import API from "../utils/API";
+// import Employee from "../views/Employee";
 
-export default Employees;
+class searchEmployee extends Component {
+    state = {
+        // employees: [],
+        search: "",
+        result: [],
+    }
+    componentDidMount () {
+        API.getEmployees()
+        .then((res) => {
+          this.setState({
+            results: res.data.results,
+          });
+          console.log(res);
+        })
+        .catch((err) => console.log(err));
+    };
+    // handleInputChange = () => {};
+
+    render() {
+        return (
+            <div>
+                
+            </div>
+        );
+    }
+}
+
+export default searchEmployee;
