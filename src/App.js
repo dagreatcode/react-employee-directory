@@ -1,4 +1,4 @@
-// import searchEmployee from "./components/searchEmployee";
+import searchEmployee from "./components/searchEmployee";
 
 function App(props) {
   return (
