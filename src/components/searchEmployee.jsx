@@ -23,7 +23,17 @@ class searchEmployee extends Component {
     render() {
         return (
             <div>
-                
+                <div>
+                    {this.state.results.map((employee) => (
+                        <Employees
+                        image={employee.picture.thumbnail}
+                        name={employee.name.first + employee.name.last}
+                        phone={employee.phone}
+                        email={employee.email}
+                        dob={employee.dob.date}
+                        />
+                    ))}
+                </div>
             </div>
         );
     }
