@@ -1,4 +1,4 @@
-import searchEmployee from "./components/searchEmployee";
+import SearchEmployee from "./components/SearchEmployee";
 
 function App(props) {
   return (
@@ -33,7 +33,7 @@ function App(props) {
       </header>
 
       <div>
-                 {/* <searchEmployee /> */}
+                 <SearchEmployee />
       </div>
     </>
   );

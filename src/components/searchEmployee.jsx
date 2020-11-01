@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import API from "../utils/API";
 import Employees from "./Employees";
 
-class searchEmployee extends Component {
+class SearchEmployee extends Component {
     state = {
         // employees: [],
         search: "",
-        result: [],
+        results: [],
     }
     componentDidMount () {
         API.getEmployees()
@@ -18,11 +18,12 @@ class searchEmployee extends Component {
         })
         .catch((err) => console.log(err));
     };
+
     // handleInputChange = () => {};
 
     render() {
         return (
-            <div>
+
                 <div>
                     {this.state.results.map((employee) => (
                         <Employees
@@ -34,9 +35,9 @@ class searchEmployee extends Component {
                         />
                     ))}
                 </div>
-            </div>
+
         );
     }
 }
 
-export default searchEmployee;
+export default SearchEmployee;
