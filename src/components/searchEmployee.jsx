@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import API from "../utils/API";
-// import Employee from "../views/Employee";
+import Employees from "./Employees";
 
 class searchEmployee extends Component {
     state = {
